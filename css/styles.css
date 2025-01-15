@@ -20,7 +20,7 @@ ol {
 a {
   text-decoration: none;
 }
-.img {
+img {
   display: block;
   align-self: flex-start;
   max-width: 100%;
@@ -51,7 +51,7 @@ p {
   margin: 0 auto;
 }
 section {
-  padding: 120px 156px;
+  padding: 120px;
 }
 *,
 *::before,
@@ -162,7 +162,7 @@ section {
   text-align: center;
   color: #ffffff;
   max-width: 496px;
-  margin: 0 auto;
+  margin: auto;
 }
 /* ----------------------- button----------------------------*/
 .hero-button:hover,
@@ -205,6 +205,7 @@ section {
 }
 .visually-hidden {
   color: #2e2f42;
+  margin-bottom: auto;
 }
 
 .advantages-title {
@@ -213,7 +214,7 @@ section {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 .advantages-text {
   font-weight: 400;
@@ -260,6 +261,15 @@ section {
   border-radius: 0 0 4px 4px;
   width: calc((100% - 72px) / 4);
   background-color: #ffffff;
+}
+.value-heder {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  padding: 32px 0 32px;
 }
 .team-name {
   padding: 32px 0;
