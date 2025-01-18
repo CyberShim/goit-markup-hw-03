@@ -5,17 +5,12 @@ body {
   background-color: #ffffff;
   font-size: 16px;
   letter-spacing: 0.02em;
-  width: 1440px;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
 }
 ul,
 ol {
   list-style-type: none;
   margin: 0;
-  padding-left: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -29,31 +24,19 @@ img {
 h1,
 h2,
 h3,
+h4,
+h5,
 p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
+  margin: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
+
 .container {
-  width: 1158px;
+  max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
+
 *,
 *::before,
 *::after {
@@ -61,28 +44,25 @@ section {
 }
 
 /*-----------------Header -----------------------------*/
-.header-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .header {
   border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 .header-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 24px 0;
 }
-.header-nav .header-nav-list {
+.header-nav-list {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
+  align-items: center;
   gap: 40px;
 }
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -91,23 +71,41 @@ section {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
 }
 .header-logo .logo-part {
   color: #2e2f42;
-  margin-top: 24px;
+  margin-right: 76px;
 }
 .footer-logo .logo-part {
   color: #f4f4fd;
 }
+
 .header-nav-link {
+  display: block;
+  padding: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+}
+.contacts {
+  font-style: normal;
+  margin-left: auto;
+}
+.contacts-list {
+  display: flex;
+  align-items: center;
   gap: 40px;
-  padding: 24px 0;
+}
+.contacts-link {
+  display: block;
+  padding: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
 }
 .header-nav-link:hover,
 .header-nav-link:focus,
@@ -115,46 +113,26 @@ section {
 .contacts-link:focus {
   color: #404bbf;
 }
-.contacts {
-  font-style: normal;
-  font-size: 16px;
-}
-.contacts-link {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}
-.nav-main .studio:active {
-  color: #404bbf;
-  text-decoration: underline;
-}
-.contacts-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 24px;
-  gap: 40px;
-  margin-left: auto;
-}
 
 /*----------------------- Hero Section ---------------*/
-.container .hero-conteiner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+
 .hero {
   background-color: #2e2f42;
+  display: flex;
   padding: 188px 0;
   height: auto;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.hero-conteiner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -163,9 +141,9 @@ section {
   text-align: center;
   color: #ffffff;
   max-width: 496px;
-  margin: auto;
+  margin: 0 auto;
 }
-/* ----------------------- button----------------------------*/
+/* -------- button----------*/
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
@@ -185,14 +163,33 @@ section {
   border-radius: 4px;
   border: none;
   min-width: 169px;
-  margin: 45px auto 0;
+  margin: 48px auto 0;
 }
 /* ------------Advantages Section --------------------*/
 
 .advantages {
   padding: 120px 0;
 }
+.advantages-conteiner .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
+.advantages-list {
+  display: flex;
+  gap: 24px;
+}
+.advantages-item {
+  width: calc((100% - 72px) / 4);
+}
 .advantages-title {
   font-weight: 500;
   font-size: 20px;
@@ -208,18 +205,15 @@ section {
   letter-spacing: 0.02em;
   color: #434455;
 }
-.advantages-list {
-  display: flex;
-  gap: 24px;
-}
-.advantages-item {
-  width: calc((100% - 72px) / 4);
-}
+
 /* -------------------Team Section ------------------------*/
 .team {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0;
+}
+.team-conteiner {
+  display: flex;
+  flex-direction: column;
 }
 .team-title {
   color: #2e2f42;
@@ -229,7 +223,6 @@ section {
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
-  justify-content: center;
   align-items: center;
   margin-bottom: 72px;
 }
@@ -247,32 +240,29 @@ section {
   border-radius: 0 0 4px 4px;
   width: calc((100% - 72px) / 4);
   background-color: #ffffff;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
 }
+
+team-photo {
+  width: 360px;
+  height: 300px;
+}
+
 .value-heder {
-  color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2em;
-  letter-spacing: 0.02em;
-  margin-bottom: 8px;
-  padding: 32px 0 32px;
+  padding: 32px 0;
+  gap: 8px;
 }
 .team-name {
-  padding: 32px 0;
-  margin-bottom: 8px;
-}
-
-.team-conteiner {
-  color: #2e2f42;
-  font-size: 20px;
   font-weight: 500;
-  line-height: 1.2em;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  text-transform: capitalize;
   margin-bottom: 8px;
-}
-
-.team-photo {
-  background-color: #ffffff;
 }
 
 .team-role {
@@ -282,18 +272,21 @@ section {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
+  text-transform: capitalize;
 }
 
 /* ---------------------Portfolio Section --------------*/
+
 .portfolio {
-  color: #434455;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5em;
-  letter-spacing: 0.02em;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  text-transform: capitalize;
+  padding: 120px 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
+
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -306,19 +299,25 @@ section {
 }
 .portfolio-list {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 24px;
+  flex-direction: row;
   row-gap: 48px;
+  column-gap: 24px;
 }
+
 .portfolio-item {
   width: calc((100% - 48px) / 3);
+  background: #fff;
 }
-.portfolio-image {
+
+.portfolio-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
-  margin-bottom: 0;
 }
 
 .portfolio-name {
@@ -329,18 +328,12 @@ section {
   color: #2e2f42;
   margin-bottom: 8px;
 }
-.portfolio-block {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
-  margin-bottom: 8px;
-}
+
 .portfolio-category {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
   color: #434455;
 }
 /*----------------------- Footer------------------ */
@@ -354,7 +347,6 @@ section {
 }
 .footer-logo {
   display: inline-block;
-  gap: 0px;
   margin-bottom: 16px;
 }
 .footer-text {
@@ -365,7 +357,4 @@ section {
   color: #f4f4fd;
   display: block;
   max-width: 264px;
-}
-.footer-conteiner {
-  display: block;
 }
