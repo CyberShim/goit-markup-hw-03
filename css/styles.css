@@ -46,6 +46,7 @@ p {
 /*-----------------Header -----------------------------*/
 .header {
   border-bottom: 1px solid #e7e9fc;
+  padding: 24px 0;
 }
 
 .header-container {
@@ -71,6 +72,7 @@ p {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 .header-logo .logo-part {
   color: #2e2f42;
